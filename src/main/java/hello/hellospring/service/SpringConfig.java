@@ -8,21 +8,23 @@ import org.springframework.context.annotation.Configuration;
 
 import javax.persistence.EntityManager;
 import javax.sql.DataSource;
+import javax.swing.*;
 
 @Configuration
 public class SpringConfig {
 
     private final MemberRepository memberRepository;
 
+
     @Autowired
     public SpringConfig(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
 
-    @Bean
-    public MemberService memberService() {
-        return new MemberService(memberRepository);
-    }
+//    @Bean
+//    public MemberService memberService() {
+//        return new MemberService(memberRepository);
+//    }
 
 //    @Bean
 //    public TimeTraceAop timeTraceAop(){
